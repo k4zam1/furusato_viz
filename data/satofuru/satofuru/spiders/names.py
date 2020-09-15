@@ -11,9 +11,11 @@ class NamesSpider(scrapy.Spider):
 
     def parse(self, response):
         item = City()
-        for t in response.css(".SideBox__tree")[3].css("a::text"):
-            city = t.get()
-            city_split = city.split("（")
-            city = city_split[0]
-            item["name"] = city
+        txts = response.css('.SideBox__tree')[3].css('a::text')
+        
+        for txt in txts:
+            city = txt.get()
+            item["city"] = city.split("（")[0]
             yield item
+    
+
