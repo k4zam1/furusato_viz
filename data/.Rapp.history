@@ -1,0 +1,340 @@
+lubridate.install()
+install.lubridate()
+install(lubridate)
+install.packages("lubridate")
+library(lubridate)
+economics$year
+economics
+economics$year = year(economics$date)
+economics$year
+economics
+economics$month = month(ecopnomics$date)
+economics$month = month(economics$date)
+econ2000 = economics[which(economics$year >= 2000)]
+economics$month = month(economics$date,label=True)
+economics$month = month(economics$date,label=TRUE)
+economics
+economics[which(economics$year >= 2000),]
+econ2000 = economics[which(economics$year >= 2000),]
+library(scales)
+g = ggplot(econ2000,aes(x=month,y=pop))
+g = g+geom_line(aes(color=factor(year),group=year))
+g = g+scale_color_discrete(name=Year)
+g = g+scale_color_discrete(name="Year")
+g = g+scale_y_countinuous(labels=comma)
+g = g+scale_y_countinuous(labels="comma")
+g = g+scale_y_continuous(labels=comma)
+g = g+labs(title="Population Growth",x=Month,y=Population)
+g = g+labs(title="Population Growth",x="Month",y="Population")
+g
+library(ggthemes)#
+tg = ggplot(diamonds,aes(x=carat,y=price)) + geom_point(aes(color=color))#
+tg + theme_economist() + scale_colour_excel()
+packages.install(ggthemes)
+install.packages(ggthemes)
+install.packages(ggtheme)
+library(ggthemes)
+install.packages(ggthemes)
+install.packages('ggthemes', dependencies = TRUE)install.packages('ggthemes', dependencies = TRUE)
+install.packages('ggthemes', dependencies = TRUE)
+library(ggthemes)
+tg = ggplot(diamonds,aes(x=carat,y=price)) + geom_point(aes(color=color))#
+tg + theme_economist() + scale_colour_excel()
+tg + theme_excel() + scale_colour_excel()
+tg + theme_tufte()
+tg + theme_wsj()
+forrow = 1#
+forcol = 2#
+m = matrix(1:9,nrow=3)
+apply(m,forrow,sum)
+m
+apply(m,forcol,sum)
+f = list(A=martix(1:16,4),B=matrix(1:16,2),C=1:5)
+f = list(A=matrix(1:16,4),B=matrix(1:16,2),C=1:5)
+f
+s = list(A=matrix(1:16,4),B=matrix(1:16,8),C=15:1)
+s
+mapply(identical,f,s)
+addRow = function(rx,ry){}
+addRow = function(rx,ry)
+{
+NROW(rx)+NROW(ry)
+}
+mapply(addRow,f,s)
+addRowLength = addRow
+mapply(addRowLength,f,s)
+data(diamonds)
+head(diamonds)
+aggregate(price~cut,diamonds)
+aggregate(price~cut,diamonds,data)
+aggregate(price~cut,diamonds,head)
+aggregate(price~cut,diamonds,mean)
+aggregate(cbind(price,carat)~cut,diamonds,mean)
+library(plyr)
+head(baseball)
+library(ggplot2)
+randDensity = dnorm(rnorm(30000))
+randNorm = rnorm(30000)
+randDensity = dnorm(randNorm)
+ggplot(data.frame(x=randNorm,y=randDensity)+aes(x=x,y=y))+geom_point()+labs(x="Random Normal Variables",y="Density")
+ggplot(data.frame(x=randNorm,y=randDensity))+aes(x=x,y=y)+geom_point()+labs(x="Random Normal Variables",y="Density")
+ggplot(data.frame(x=randNorm,y=pnorm(randNorm)))+aes(x=x,y=y)+geom_point()+labs(x="Random Normal Variables",y="Density")
+rbinom(n=1,size=10,prob=0.4)
+x = sample(x=1:100,size=100,replace=TRUE)
+x
+mean(x)
+x = sample(x=1:100,size=10000,replace=TRUE)
+mean(x)
+grades = c(95,72,87,66)
+weights = c(1/2,1/4,1/8,1/8)
+mean(grades)
+weighted.mean(x=grades,w=weights)
+econmics
+economics
+cor(economics$pce,economics$psavert)
+cor(economics[,c(2,4:6)])
+c(2,4:6)
+economics[0]
+economics[2]
+economics[2,4,5,6]
+economics[,2,4,5,6]
+GGally::ggpairs(economics,economics[,c(2,4:6)])
+library(reshape2)
+package.install(reshape2)
+install.packages(reshape2,dependencies=TRUE)
+install.packages("reshape2",dependencies=TRUE)
+library(reshape2)
+library(scales)
+econCor = cor(economics[,c(2,4:6)])
+econMelt = melt(econCor,varnames=c("x","y"),value.name="Correlation")
+econMelt
+ggplot(econMelt,aes(x=x,y=y))+
+geom_title(aes(fill=Correlation))+
+scale_fill_gradient2(low=muted("red"),mid="white",high="steelblue",guide=guide_colorbar(ticks=FALSE,barheight=10),limits=c(-1,1))+
+theme_minimal()+
+labs(x=NULL,y=NULL)
+ggplot(econMelt,aes(x=x,y=y))+
+geom_tile(aes(fill=Correlation))+
+scale_fill_gradient2(low=muted("red"),mid="white",high="steelblue",guide=guide_colorbar(ticks=FALSE,barheight=10),limits=c(-1,1))+
+theme_minimal()+
+labs(x=NULL,y=NULL)
+tips
+data(tips,package="reshape2")
+tips
+install.packages("GGally",dependencies=TRUE)
+library(GGally)
+GGally::ggpairs(tips)
+head(tips)
+library(ggplot2)
+head(tips)
+library(RXKCD)
+install.packages(RXKCD,dependencies=TRUE)
+library(RXKCD)
+data(tips,package="reshape2")
+tips
+unique(tips$sex)
+unique(tips$day)
+head(tips)
+mean(tios$tip)
+mean(tips$tip)
+t.test(tips$tip,alternative="two.side",mu=2.50)
+t.test(tips$tip,alternative="two.side",mu=2.90)
+t.test(tips$tip,alternative="two.side",mu=3.0)
+randT = rt(30000,df=NROW(tips)-1)
+randT
+NROW(tips)
+tipsTTest = t.test(tips$tip,alternative="two.sided",mu=2.5)
+ggplot(data.frame(x=randT)) + geom_density(aes(x=x),fill="grey",color="grey") + geom_vline(xintercept = tipTTest$statistic) + geom_vline(xintercept = mean(randT) + c(-2,2)*sd(randT),linetype=2)
+ggplot(data.frame(x=randT)) + geom_density(aes(x=x),fill="grey",color="grey") + geom_vline(xintercept = tipsTTest$statistic) + geom_vline(xintercept = mean(randT) + c(-2,2)*sd(randT),linetype=2)
+aggregate(tip~sex,data=tips,var)
+sharpiro.test(tips$tip)
+shapiro.test(tips$tip)
+result = shapiro.test(tips$tip)
+result
+result.p-value
+result.W
+result$W
+result$p
+result$w
+a = 0.05#
+tipp = shapiro.test(tips$tip)#
+if(tipp < a){#
+    print("tips$tipに正規性はない")#
+}
+a = 0.05#
+tipp = shapiro.test(tips$tip)#
+if(tipp.p < a){#
+    print("tips$tipに正規性はない")#
+}
+tipp
+a = 0.05#
+tipp = shapiro.test(tips$tip)#
+if(tipp$p < a){#
+    print("tips$tipに正規性はない")#
+}
+a = 0.05#
+tipp = shapiro.test(tips$tip)#
+if(tipp$p < a){#
+    print(tips$tipに正規性はない)#
+}
+a = 0.05#
+tipp = shapiro.test(tips$tip)#
+if(tipp$p < a){#
+    print("tips$tipに正規性はない")#
+}#
+else {#
+    print("tips$tipは正規分布に従う")#
+}
+a = 0.05#
+tipp = shapiro.test(tips$tip)#
+if(tipp$p < a){#
+    print("tips$tipに正規性はない")#
+} else {#
+    print("tips$tipは正規分布に従う")#
+}
+shapiro.test(tips$tip[tips$sex == "Female"])
+shapiro.test(tips$tip[tips$sex == "Male"])
+normalTest = function(x,a=0.05){#
+    a = a#
+    res = shapiro.test(x)#
+    if(x$p < a){#
+        print("正規性なし")#
+    } else {#
+        print("正規分布に従う")#
+    }#
+}
+print("tips$tipのShapiroテスト: ")#
+normalTest(tips$tip)
+normalTest = function(x,a=0.05){#
+    a = a#
+    res = shapiro.test(x)#
+    if(res$p < a){#
+        print("正規性なし")#
+    } else {#
+        print("正規分布に従う")#
+    }#
+}
+print("tips$tipのShapiroテスト: ")#
+normalTest(tips$tip)#
+print('tips$tip[tips$sex == "Female"]のShapiroテスト: ')#
+normalTest(tips$tip[tips$sex == "Female"])#
+print('tips$tip[tips$sex == "Male"]のShapiroテスト: ')#
+normalTest(tips$tip[tips$sex == "Male"])
+normalTest = function(x,a=0.05){#
+    a = a#
+    res = shapiro.test(x)#
+    if(res$p < a){#
+        sprintf("正規性なし,有意水準:",a)#
+    } else {#
+        print("正規分布に従う,有意水準:",a)#
+    }#
+}#
+#
+print("tips$tipのShapiroテスト: ")#
+normalTest(tips$tip)#
+print('tips$tip[tips$sex == "Female"]のShapiroテスト: ')#
+normalTest(tips$tip[tips$sex == "Female"])#
+print('tips$tip[tips$sex == "Male"]のShapiroテスト: ')#
+normalTest(tips$tip[tips$sex == "Male"])
+normalTest = function(x,a=0.05){#
+    a = a#
+    print(a)#
+    res = shapiro.test(x)#
+    if(res$p < a){#
+        print("正規性なし")#
+    } else {#
+        print("正規分布に従う")#
+    }#
+}#
+#
+print("tips$tipのShapiroテスト: ")#
+normalTest(tips$tip)#
+print('tips$tip[tips$sex == "Female"]のShapiroテスト: ')#
+normalTest(tips$tip[tips$sex == "Female"])#
+print('tips$tip[tips$sex == "Male"]のShapiroテスト: ')#
+normalTest(tips$tip[tips$sex == "Male"])
+ggplot(tips,aes(x=tip,fill=sex))+geom_histogram(binwidth=5,alpha=1/2)
+ansari.test(tip~sex,tips)
+t.test(tip~sex,data=tips,var.equal=TRUE)
+data(father.son,package="UsingR")#
+t.test(father.son$fheight,father.son$sheight,paired=TRUE)
+install.packages(UsingR)
+install.packages("UsingR")
+data(father.son,package="UsingR")#
+t.test(father.son$fheight,father.son$sheight,paired=TRUE)
+tipAnova = aov(tip~day-1,tips)
+tipsAnova$coefficients
+tipAnova$coefficients
+summary(tipAnova)
+heightsLM = lm(sheight~fheight,data=father.son)#
+summary(heightsLM)
+library(MASS)
+library(ISLR)
+Boston
+head(Boston)
+lm.fit = lm(medv~lstat,data=Boston)
+lm.fit
+summary(lm.fit)
+lm.fit$model
+lm.fit$coefficients
+abline(lm.fit,lwd=3)
+plot.new
+plot.new()
+abline(lm.fit,lwd=3,col="red")
+polot.new() + abline(lm.fit,lwd=3)
+plot.new() + abline(lm.fit,lwd=3)
+plot(lstat,medv,col="red")
+plot(Boston$lstat,Boston$medv,col="red")
+plot(Boston$lstat,Boston$medv,pch=20)
+plot(Boston$lstat,Boston$medv,pch="+")
+lm.fit = lm(medv~.,data=Boston)
+summary(lm.fit)
+setwd(~/git/furusato_viz/data/)
+setwd("~/git/furusato_viz/data/")
+soumu <- read.csv("cleaned_soumu.csv",sep=",")
+soumu.head()
+head(soumu)
+lm.fit = lm(寄附金額~.,data=soumu)
+summary(lm.fit)
+head(soumu)
+lm.fit = lm(寄附金額~.-code-pref-city,data=soumu)
+class(soumu)
+class(soumu$呼びかけ)
+soumu[14]
+soumu[13]
+soumu[14:]
+soumu[14:32]
+soumu[14:33]
+soumu = lapply(soumu[14:32],as.factor)
+soumu.head()
+head(soumu)
+soumu <- read.csv("cleaned_soumu.csv",sep=",")
+soumu[14:32] = lapply(soumu[14:32],as.factor)
+head(soumu)
+is.factor(soumu[14])
+sapply(soumu,class)
+head(soumu$呼びかけ)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県,data=soumu)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県外,data=soumu)
+summary(lm.fit)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県外-その他費用,data=soumu)
+summary(lm.fit)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県外-その他費用-返礼品等の送付に係る費用,data=soumu)
+summary(lm.fit)
+class(soumu$返礼品等の送付に係る費用)
+soumu$返礼品等の送付に係る費用 = as.integer(soumu$返礼品等の送付に係る費用)
+head(soumu$返礼品等の送付に係る費用)
+soumu$その他費用 = as.integer(soumu$その他費用)
+soumu$その他費用[is.na(soumu$その他費用)] <- 0
+head8soumu$その他費用
+head(soumu$その他費用)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県外-その他費用-返礼品等の送付に係る費用-決済等に係る費用-事務に係る費用,data=soumu)
+summary(lm.fit)
+abline(lm.fit)
+library(car)
+vif(lm.fit)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県外-その他費用-返礼品等の送付に係る費用,data=soumu)
+vif(lm.fit)
+lm.fit = lm(寄附金額~.-code-pref-city-寄附件数-寄附件数_県外-寄附金額_県外-その他費用-返礼品等の送付に係る費用-決済等に係る費用-事務に係る費用-分野-用途選択肢,data=soumu)
+vif(lm.fit)
+summary(lm.fit)
