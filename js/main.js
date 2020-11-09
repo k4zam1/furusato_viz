@@ -56,7 +56,7 @@ var drawJapanMap = function(){
     }
 }
 var drawEarthQuake = function(){
-    d3.csv("data/master_data/earthquake2019.csv", function(data) {
+    d3.csv("data/master_data/earthquake2019.csv", function(error,data) {
         console.log(data);
     });
 }
