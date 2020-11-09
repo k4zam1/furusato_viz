@@ -63,4 +63,5 @@ var drawEarthQuake = function(){
 
 var main = function(){
     drawJapanMap();
+    drawEarthQuake();
 }();
