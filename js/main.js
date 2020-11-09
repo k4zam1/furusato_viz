@@ -62,6 +62,7 @@ var drawEarthQuake = function(){
 }
 
 var main = function(){
+    console.log("main");
     drawJapanMap();
     drawEarthQuake();
 }();
